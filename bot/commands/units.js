@@ -53,7 +53,7 @@ module.exports = {
             })
 
             replyData.outcome = []
-            for (const key in unitsList) {
+            for (const key in unitsList.toSorted()) {
                 if (key === 'nb') continue
 
                 replyData.outcome.push({ code: key, ...unitsList[key] })
